@@ -1,0 +1,122 @@
+.container {
+    position: static;
+    box-sizing: content-box;
+    -webkit-box-align: center;
+    display: flex;
+    align-items: center;
+}
+.biodata{
+			padding: 30px 0 40px;
+			background: transparent;
+			text-align: center;
+			overflow: hidden;
+			position: relative;
+		}
+ 
+		.biodata .pic{
+			display: inline-block;
+			width: 150px;
+			height: 130px;
+			margin-bottom: 50px;
+			/*background:#f89406;*/
+			position: relative;
+			z-index: 1;
+		}
+ 
+		.biodata .pic:before
+		{
+			content: "";
+			width: 100%;
+			background: #f89406;
+			position: absolute;
+			bottom: 135%;
+			right: 0;
+			left: 0; 
+			transform: scale(3);
+			transition: all 0.3s linear 0s;
+		}
+ 
+		.biodata:hover .pic:before
+		{
+			height: 100%;
+		}
+ 
+		.biodata .pic:after
+		{
+			content: "";
+			width: 100%;
+			height: 100%;
+			border-radius: 50%;
+			background: #f89406;
+			position: absolute;
+			top: 0;
+			left: 0; 
+			z-index: -1;
+		}
+ 
+		.biodata .pic img{
+			width: 100%;
+			height: auto;
+			border-radius: 50%;
+			transform: scale(1);
+			transition: all 0.9s ease 0s;
+		}
+ 
+		.biodata:hover .pic img
+		{
+			box-shadow: 0 0 0 14px #f89406;
+			transform: scale(0.7);
+		}
+ 
+		.biodata .isi
+		{
+			margin-bottom: 30px;
+		}
+		
+		.biodata .title{
+			font-size: 22px;
+			font-weight: 700;
+			color:#4e5052;
+			letter-spacing: 1px;
+			text-transform: capitalize;
+			margin-bottom: 5px;
+		}
+ 
+		.biodata .post{
+			display: block;
+			font-size: 15px;
+			color:#4e5052;
+
+		}
+ 
+		.biodata .social{
+		      width: 100%;
+			padding:0;
+			margin:0;
+			background: #FFD8A9;
+			-webkit-box-align: center;
+			bottom: -100px;
+			left:0;
+			transition: all 0.4 ease 0s;
+		}
+ 
+		.biodata:hover .social{
+			bottom:0;
+		}
+ 
+		.biodata .social li{
+			display: inline-block;
+		}
+ 
+		.biodata .social li a{
+			display: block;
+			padding:10px;
+			font-size: 17px;
+			color:#fff;
+			transition: all 0.4s ease 0s;
+		}
+ 
+		.biodata .social li a:hover{
+			color:#FFD8A9;
+			background: #f7f5ec;
+		}
